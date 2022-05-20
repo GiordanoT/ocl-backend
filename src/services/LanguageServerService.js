@@ -27,7 +27,7 @@ module.exports = {
 
         ls.on('close', (code) => {
           if (code !== 0) {
-            throw new Error(`Error: language server exited with code: ${code}\nHINT: Try to wait ~10 sec before next start.`)
+            throw new Error(`Error: language server exited with code: ${code}`)
           }
         })
       } catch (err) {
