@@ -24,15 +24,8 @@ RUN  apk update \
 COPY package-lock.json package.json /app/
 RUN npm ci --loglevel verbose
 COPY . .
-RUN npm start
-
-
-# FROM node:14.2
-# WORKDIR /app
-# COPY package-lock.json package.json /app/
-# RUN npm ci --loglevel verbose
-# COPY . .
-# RUN npm start
+EXPOSE 8085
+CMD [ "npm", "start" ]
 
 
 
